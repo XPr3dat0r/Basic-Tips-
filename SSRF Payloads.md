@@ -71,3 +71,20 @@ http://169.254.169.254/latest/meta-data/public-hostname
 > If there is an IAM role associated with the instance, role-name is the name of the role, and role-name contains the temporary security credentials associated with the role [...]
 
 _Link:_ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html (includes a comprehensive Instance Metadata Categories table)
+
+
+**AWS METADATA** 
+
+http://169.254.169.254/latest/meta-data/ returns the list of available metadata that you can query.
+
+http://169.254.169.254/latest/meta-data/local-hostname/ returns the internal hostname used by the host.
+
+http://169.254.169.254/latest/meta-data/iam/security-credentials/ROLE_NAME returns the security credentials of that role.
+
+http://169.254.169.254/latest/dynamic/instance-identity/document reveals the private IP address of the current instance.
+
+http://169.254.169.254/latest/user-data/ returns user data on the current instance.
+
+
+Blog 
+https://medium.com/@vickieli/exploiting-ssrfs-b3a29dd7437
